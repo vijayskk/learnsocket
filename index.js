@@ -1,8 +1,11 @@
 const express = require('express')
 const socket = require('socket.io')
 const app = express()
-var server = app.listen(4000,()=>{
-    console.log("Server is up");
+const dotenv = require('dotenv')
+dotenv.config();
+const port = process.env.PORT || 4000 
+var server = app.listen(port,()=>{
+    console.log("Server is up on ",port);
 })
 
 app.use(express.static('public'))
