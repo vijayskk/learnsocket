@@ -3,7 +3,7 @@ const socket = require('socket.io')
 const app = express()
 const dotenv = require('dotenv')
 dotenv.config();
-const port = process.env.PORT || 4000 
+const port = process.env.PORT || 3000 
 var server = app.listen(port,()=>{
     console.log("Server is up on ",port);
 })
